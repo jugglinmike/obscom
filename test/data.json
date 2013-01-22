@@ -12,6 +12,18 @@
 		]
 	},
 	{
+		"input": "That moment when Beckett says \"Rick...I am pregnant\". - agent-beckett-dunham: http://t.co/FbQJbkei",
+		"expected": [
+			"What's the deal with that moment when Beckett says \"Rick...I am pregnant\"?"
+		]
+	},
+	{
+		"input": "That moment when Beckett says 'Rick...I am pregnant'. - agent-beckett-dunham: http://t.co/FbQJbkei",
+		"expected": [
+			"What's the deal with that moment when Beckett says 'Rick...I am pregnant'?"
+		]
+	},
+	{
 		"input": "Not an observation",
 		"expected": []
 	}

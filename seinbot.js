@@ -1,6 +1,19 @@
 var nouns = ["moment", "feeling"];
 // TODO: "(when|where)"
-var obsRegex = new RegExp("that .*(" + nouns.join("|") + ") (when|where)([^\.\?!]*)", "gi");
+var obsRegex = new RegExp("that " +
+		".*" +
+			"(" + nouns.join("|") + ")\\s" +
+		"(when|where)" +
+		"((?:" +
+			// Any non-punctuation, non-quote string
+			"[^\.\?!\"']*|" +
+			// Any double-quote wrapped string
+			"\"[^\"]+\"|" +
+			// Any single-quote wrapped string
+			"'[^']+'|" +
+			// Any non-punctuation string
+			"[^\.\?!]" +
+		"*)+)", "gi");
 
 function clean(text) {
 	return text
