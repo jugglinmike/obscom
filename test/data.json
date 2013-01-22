@@ -10,5 +10,9 @@
 		"expected": [
 			"What's the deal with that feeling where you don't know when you are going to see your other half again?"
 		]
+	},
+	{
+		"input": "Not an observation",
+		"expected": []
 	}
 ]
