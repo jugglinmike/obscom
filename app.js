@@ -32,8 +32,10 @@ function processResponse(error, response, body) {
 	return data.results;
 }
 
-function isValidTweet(tweet) {
-	return tweet.length <= 140;
+function validTweets(results) {
+	return results.map(function(result) {
+		return result.length <= 140;
+	});
 }
 
 function parseResult(result) {
@@ -44,6 +46,7 @@ request(createUrl(noun), function() {
 	var searchResults = processResponse.apply(null, arguments);
 	var tweets = searchResults.map(parseResult)
 		.map(seinbot)
+		.filter(validTweets)
 		.filter(function(results) {
 			return results.length;
 		});
