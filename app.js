@@ -2,11 +2,9 @@ var Twit = require("twit");
 var request = require("request");
 var seinbot = require("./seinbot");
 
-var noun = "moment";
+function createUrl() {
 
-function createUrl(noun) {
-
-	var searchTerm = "that " + noun + " when";
+	var searchTerm = "that (feeling OR moment) (where OR when)";
 	searchTerm = searchTerm.replace(/ /g, "+");
 
 	return  "http://search.twitter.com/search.json?callback=?&rpp=100&q='" +
@@ -42,7 +40,7 @@ function parseResult(result) {
 	return result.text;
 }
 
-request(createUrl(noun), function() {
+request(createUrl(), function() {
 	var searchResults = processResponse.apply(null, arguments);
 	var tweets = searchResults.map(parseResult)
 		.map(seinbot)
