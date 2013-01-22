@@ -1,6 +1,6 @@
 var nouns = ["moment", "feeling"];
 // TODO: "(when|where)"
-var obsRegex = new RegExp("that .*(" + nouns.join("|") + ") when([^\.\?!]*)", "gi");
+var obsRegex = new RegExp("that .*(" + nouns.join("|") + ") (when|where)([^\.\?!]*)", "gi");
 
 function clean(text) {
 	return text
@@ -12,8 +12,8 @@ function clean(text) {
 // Remove any preamble to the original observation along with any extraneous
 // descriptive text.
 function normalize(tweet) {
-	return tweet.replace(obsRegex, function(_, noun, observation) {
-		return "that " + noun + " when" + observation;
+	return tweet.replace(obsRegex, function(_, noun, conjunction, observation) {
+		return "that " + noun + " " + conjunction + observation;
 	});
 }
 

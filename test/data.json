@@ -6,9 +6,9 @@
 		]
 	},
 	{
-		"input": "RT @CristenPense: That feeling when you don't know when you are going to see your other half again. &lt;&lt;&lt; \n\n@Cortney_Nicole #SadTweet",
+		"input": "RT @CristenPense: That feeling where you don't know when you are going to see your other half again. &lt;&lt;&lt; \n\n@Cortney_Nicole #SadTweet",
 		"expected": [
-			"What's the deal with that feeling when you don't know when you are going to see your other half again?"
+			"What's the deal with that feeling where you don't know when you are going to see your other half again?"
 		]
 	}
 ]
