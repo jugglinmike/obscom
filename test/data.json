@@ -1,0 +1,14 @@
+[
+	{
+		"input": "That feeling when you can't wake up in the morning",
+		"expected": [
+			"What's the deal with that feeling when you can't wake up in the morning?"
+		]
+	},
+	{
+		"input": "RT @CristenPense: That feeling when you don't know when you are going to see your other half again. &lt;&lt;&lt; \n\n@Cortney_Nicole #SadTweet",
+		"expected": [
+			"What's the deal with that feeling when you don't know when you are going to see your other half again?"
+		]
+	}
+]

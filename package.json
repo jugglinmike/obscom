@@ -3,11 +3,17 @@
   "name": "seinbot",
   "version": "0.0.1",
   "homepage": "http://twitter.com/seinbot/",
+  "scripts": {
+    "test": "node test/"
+  },
   "engines": {
     "node": "~0.8"
   },
   "dependencies": {
     "twit": "~1.0.12",
     "request": "~2.12.0"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.7.4"
   }
 }
