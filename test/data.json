@@ -24,6 +24,12 @@
 		]
 	},
 	{
+		"input": "You know that moment when everything just feels right with the world & you know you're on your path? THAT is when you're screwed",
+		"expected": [
+			"What's the deal with that moment when everything just feels right with the world & you know you're on your path?"
+		]
+	},
+	{
 		"input": "Not an observation",
 		"expected": []
 	}

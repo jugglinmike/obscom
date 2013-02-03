@@ -4,12 +4,15 @@ var obsRegex = new RegExp("that " +
 			"(" + nouns.join("|") + ")\\s" +
 		"(when|where)" +
 		"((?:" +
-			// Any non-punctuation, non-quote string
-			"[^\.\?!\"']*|" +
+			// Any punctuation-, quote-, and whitespace-free string
+			"[^\.\?!\"'\\s]*|" +
 			// Any double-quote wrapped string
 			"\"[^\"]+\"|" +
 			// Any single-quote wrapped string
-			"'[^']+'|" +
+			"\\s'[^']+'|" +
+			// Any whitespace (consuming late so that single quote expression
+			// can attempt to differentiate between quotations and apostrophes)
+			"\\s|" +
 			// Any non-punctuation string
 			"[^\.\?!]" +
 		"*)+)", "gi");
