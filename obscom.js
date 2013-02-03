@@ -1,5 +1,4 @@
 var nouns = ["moment", "feeling"];
-// TODO: "(when|where)"
 var obsRegex = new RegExp("that " +
 		".*" +
 			"(" + nouns.join("|") + ")\\s" +
