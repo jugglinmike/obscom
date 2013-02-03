@@ -1,4 +1,5 @@
 # ObsCom
+![Build Status](https://api.travis-ci.org/jugglinmike/obscom.png "Build Status")
 
 A tiny utility to find the observational comedy hidden in blocks of text.
 
