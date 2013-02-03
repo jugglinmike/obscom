@@ -50,4 +50,23 @@ function makeObservations(input) {
 		.map(seinfeldify);
 }
 
-module.exports = makeObservations;
+function processStdIn() {
+	var input = "";
+
+	process.stdin.resume();
+	process.stdin.setEncoding("utf8");
+
+	process.stdin.on("data", function(chunk) {
+		input += chunk;
+	});
+
+	process.stdin.on("end", function() {
+		process.stdout.write(JSON.stringify(makeObservations(input)) + "\n");
+	});
+}
+
+if (require.main === module) {
+	processStdIn();
+} else {
+	module.exports = makeObservations;
+}
