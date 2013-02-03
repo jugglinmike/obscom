@@ -3,6 +3,7 @@
   "name": "obscom",
   "version": "0.0.1",
   "homepage": "http://github.com/jugglinmike/obscom",
+  "main": "./obscom.js",
   "scripts": {
     "test": "node test/"
   },
