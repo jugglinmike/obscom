@@ -1,4 +1,5 @@
 var nouns = ["moment", "feeling"];
+garbage!
 var obsRegex = new RegExp("that " +
 		".*" +
 			"(" + nouns.join("|") + ")\\s" +
